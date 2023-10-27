@@ -8,6 +8,9 @@ import SyncStBarchart from './Test/SyncStBarchart';
 import LineChart from './Test/LineChart';
 import Overview from './pages/Overview';
 
+import DtRangePicker from './components/DtRangePicker';
+
+
 
 function App() {
   return (
@@ -20,6 +23,7 @@ function App() {
           <Route path='/ab' element={<StBarChart />}></Route>
           <Route path='/sy' element={<SyncStBarchart />}></Route>
           <Route path='/ln' element={<LineChart />}></Route>
+          <Route path='/dt' element={<DtRangePicker />}></Route>
         </Routes>
       </BrowserRouter>
     </>
