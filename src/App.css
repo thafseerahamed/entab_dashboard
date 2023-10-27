@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* CSS for legend title */
+.canvasjs-chart-legend-title {
+  position: absolute;
+  top: 10px; /* Adjust the top position as needed */
+  text-align: center; /* Center the title */
+  width: 100%; /* Ensure full width */
+}
+
+/* CSS for legend items */
+.canvasjs-chart-legend {
+  position: relative;
+  top: 0; /* Adjust the top position as needed */
+  text-align: center; /* Center the legend items */
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
