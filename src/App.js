@@ -6,6 +6,7 @@ import Analytics from './pages/Analytics';
 import StBarChart from './Test/StBarChart';
 import SyncStBarchart from './Test/SyncStBarchart';
 import LineChart from './Test/LineChart';
+import Overview from './pages/Overview';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/analytics' element={<Analytics />}></Route>
+          <Route path='/overview' element={<Overview />}></Route>
           <Route path='/ab' element={<StBarChart />}></Route>
           <Route path='/sy' element={<SyncStBarchart />}></Route>
           <Route path='/ln' element={<LineChart />}></Route>

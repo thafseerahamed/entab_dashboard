@@ -18,6 +18,7 @@ import MuiAppBar from '@mui/material/AppBar';
 import { useAppStore } from '../appStore';
 import DonutSmallIcon from '@mui/icons-material/DonutSmall';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import { Avatar, Stack } from '@mui/material';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -28,7 +29,7 @@ const Search = styled('div')(({ theme }) => ({
     },
     marginRight: theme.spacing(2),
     marginLeft: "50px",
-    width: '40% !important',
+    width: '30% !important',
     [theme.breakpoints.up('sm')]: {
         marginLeft: theme.spacing(3),
         width: 'auto',
@@ -166,31 +167,31 @@ export default function Navbar() {
     );
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="fixed" elevation={0} sx={{backgroundColor:'#ffffff' ,color:'#2f2f2f'}}>
+        <Box sx={{ flexGrow: 1}}>
+            <AppBar position="fixed" elevation={0} sx={{ backgroundColor: '#ffffff', color: '#2f2f2f' }}>
                 <Toolbar>
-                <Box width={30}></Box>
-                <DonutSmallIcon sx={{height:"65" ,width:"65",color:"#0d54dc"}}/> 
-                <Box width={3}></Box>
-                <Typography
+                    <Box width={30}></Box>
+                    <DonutSmallIcon sx={{ height: "65", width: "65", color: "#0d54dc" }} />
+                    <Box width={3}></Box>
+                    <Typography
                         variant="h5"
                         noWrap
                         component="div"
-                        sx={{ display: { xs: 'none', sm: 'block' },color: "#0d54dc",fontWeight:"bold"}}
+                        sx={{ display: { xs: 'none', sm: 'block' }, color: "#0d54dc", fontWeight: "bold" }}
                     >
-                       STRIX
+                        STRIX
                     </Typography>
-                  <Box width={100}></Box>
+                    <Box width={100}></Box>
                     <Typography
                         variant="h6"
                         noWrap
                         component="div"
-                        sx={{ display: { xs: 'none', sm: 'block' } ,fontWeight:"bold"}}
+                        sx={{ display: { xs: 'none', sm: 'block' }, fontWeight: "bold" }}
                     >
-                       Overview
+                        Overview
                     </Typography>
                     <Box width={100}></Box>
-                    <Search sx={{backgroundColor:"#f4f7fc"}}>
+                    <Search sx={{ backgroundColor: "#f4f7fc" }}>
                         <SearchIconWrapper>
                             <SearchIcon />
                         </SearchIconWrapper>
@@ -201,30 +202,37 @@ export default function Navbar() {
                     </Search>
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                  
-                        <IconButton
-                            size="large"
-                            aria-label="show 17 new notifications"
-                            color="inherit"
-                        >
-                            <Badge badgeContent={0} color="error">
-                                <NotificationsNoneOutlinedIcon />
-                            </Badge>
-                        </IconButton>
-                        <IconButton
-                            size="large"
-                            edge="end"
-                            aria-label="account of current user"
-                            aria-controls={menuId}
-                            aria-haspopup="true"
-                            onClick={handleProfileMenuOpen}
-                            color="inherit"
-
-                        >
-                            <AccountCircle />
-                        </IconButton>
+                    <Stack direction='row' spacing={1}>
+                        <Badge variant='dot' color="error">
+                            <Avatar variant='rounded' sx={{ backgroundColor: "white", border: '0.1px solid lightgray' }}>
+                                <NotificationsNoneOutlinedIcon sx={{ color: "grey" }} />
+                        </Avatar>
+                        </Badge>
+                      
+                        <Avatar src='https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg&ga=GA1.1.386372595.1698192000&semt=ais'
+                         sx={{ height:"10",width:"10" }}>
+                        </Avatar>
+                        <Stack>
+                        <Typography
+                        variant="body1"
+                        noWrap
+                        component="div"
+                        sx={{ display: { xs: 'none', sm: 'block' }, fontWeight:"medium"}}
+                    >
+                       David Andrew
+                    </Typography>
+                        <Typography
+                        variant="body2"
+                        noWrap
+                        component="div"
+                        sx={{ display: { xs: 'none', sm: 'block' }, fontWeight:"light"}}
+                    >
+                        david.andrew@strix.com
+                    </Typography>
+                    </Stack>
+                    </Stack>
                     </Box>
-                   
+
                 </Toolbar>
             </AppBar>
             {renderMobileMenu}
