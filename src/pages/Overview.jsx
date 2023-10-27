@@ -1,12 +1,12 @@
 import React from 'react'
 import Sidenav from '../components/Sidenav'
-import { Box, Divider, Typography } from '@mui/material'
+import { Box, Button, ButtonGroup, Divider, Typography } from '@mui/material'
 import Navbar from '../components/Navbar'
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Stack from '@mui/material/Stack'
-import { Avatar} from '@mui/material';
+import { Avatar } from '@mui/material';
 import '../Dash.css'
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
@@ -17,7 +17,13 @@ import CountUp from 'react-countup';
 import GroupsIcon from '@mui/icons-material/Groups';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import StkBarChart from '../Test/StkBarChart';
+import LineChart from '../Test/LineChart';
 const Overview = () => {
+  const buttonStyle = {
+    fontSize: '12px', // Adjust the font size as needed
+  };
   return (
     <div >
       <Navbar />
@@ -27,107 +33,107 @@ const Overview = () => {
 
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <Grid container spacing={2}>
-       
-            <Grid item xs={3}>
-              
-                <Card sx={{ minWidth: 100 + "%", height: 119}}>
 
-                  <CardContent>
-                    <Stack spacing={1} direction='row'>
-                      
-                        <div>
-                      <GroupsIcon sx={{color:"#2e94fc"}}/>
-                      </div>
-                     
-                    <Typography className='texttp'variant="subtitle2" component="div" sx={{ color: '#989eab' ,}}>
-                     Total Employees   </Typography>
-                    </Stack>
-                    <Stack direction='row' justifyContent="space-between">
-                    <Typography gutterBottom variant="h5" component="div" sx={{ color: 'black' ,fontWeight:"bold"}}>
-                      <CountUp delay={0.2} end={5700} duration={0.3}/>
+            <Grid item xs={3}>
+
+              <Card sx={{ minWidth: 100 + "%", height: 119 }}>
+
+                <CardContent>
+                  <Stack spacing={1} direction='row'>
+
+                    <div>
+                      <GroupsIcon sx={{ color: "#2e94fc" }} />
+                    </div>
+
+                    <Typography className='texttp' variant="subtitle2" component="div" sx={{ color: '#989eab', }}>
+                      Total Employees   </Typography>
+                  </Stack>
+                  <Stack direction='row' justifyContent="space-between">
+                    <Typography gutterBottom variant="h5" component="div" sx={{ color: 'black', fontWeight: "bold" }}>
+                      <CountUp delay={0.2} end={5700} duration={0.3} />
                     </Typography>
-                  <Typography className='pro' gutterBottom variant="body2" component="div" sx={{ color: 'success.light' ,fontWeight:"medium"}}>
+                    <Typography className='pro' gutterBottom variant="body2" component="div" sx={{ color: 'success.light', fontWeight: "medium" }}>
                       ^ 12%
                     </Typography>
-                
-
-                    </Stack>
-                    <Divider />
-                    <Box height={4 }></Box>
-                   
-                    <Typography gutterBottom variant="caption" component="div" sx={{ color: '#989eab' }}>
-                      Update:March 26,2023
-                    </Typography>
 
 
-                  </CardContent>
+                  </Stack>
+                  <Divider />
+                  <Box height={4}></Box>
 
-                </Card>
-               
-          
+                  <Typography gutterBottom variant="caption" component="div" sx={{ color: '#989eab' }}>
+                    Update:March 26,2023
+                  </Typography>
+
+
+                </CardContent>
+
+              </Card>
+
+
             </Grid>
             <Grid item xs={3}>
-              
-                <Card sx={{ minWidth: 100 + "%", height: 119}}>
 
-                  <CardContent>
-                    <Stack spacing={1} direction='row'>
-                      
-                        <div>
-                      <BusinessCenterIcon sx={{color:"#2e94fc"}}/>
-                      </div>
-                     
-                    <Typography className='texttp'variant="subtitle2" component="div" sx={{ color: '#989eab' ,}}>
-                     Total Applicant   </Typography>
-                    </Stack>
-                    <Stack direction='row' justifyContent="space-between">
-                    <Typography gutterBottom variant="h5" component="div" sx={{ color: 'black' ,fontWeight:"bold"}}>
-                      <CountUp delay={0.2} end={2563} duration={0.4}/>
+              <Card sx={{ minWidth: 100 + "%", height: 119 }}>
+
+                <CardContent>
+                  <Stack spacing={1} direction='row'>
+
+                    <div>
+                      <BusinessCenterIcon sx={{ color: "#2e94fc" }} />
+                    </div>
+
+                    <Typography className='texttp' variant="subtitle2" component="div" sx={{ color: '#989eab', }}>
+                      Total Applicant   </Typography>
+                  </Stack>
+                  <Stack direction='row' justifyContent="space-between">
+                    <Typography gutterBottom variant="h5" component="div" sx={{ color: 'black', fontWeight: "bold" }}>
+                      <CountUp delay={0.2} end={2563} duration={0.4} />
                     </Typography>
-                  <Typography className='pro' gutterBottom variant="body2" component="div" sx={{ color: 'success.light' ,fontWeight:"medium"}}>
+                    <Typography className='pro' gutterBottom variant="body2" component="div" sx={{ color: 'success.light', fontWeight: "medium" }}>
                       ^ 4%
                     </Typography>
-                
-
-                    </Stack>
-                    <Divider />
-                    <Box height={4 }></Box>
-                   
-                    <Typography gutterBottom variant="caption" component="div" sx={{ color: '#989eab' }}>
-                      Update:March 19,2023
-                    </Typography>
 
 
-                  </CardContent>
+                  </Stack>
+                  <Divider />
+                  <Box height={4}></Box>
 
-                </Card>
-               
-          
+                  <Typography gutterBottom variant="caption" component="div" sx={{ color: '#989eab' }}>
+                    Update:March 19,2023
+                  </Typography>
+
+
+                </CardContent>
+
+              </Card>
+
+
             </Grid><Grid item xs={3}>
-              
-              <Card sx={{ minWidth: 100 + "%", height: 119}}>
+
+              <Card sx={{ minWidth: 100 + "%", height: 119 }}>
 
                 <CardContent>
                   <Stack spacing={1} direction='row'>
-                    
-                      <div>
-                    <AssignmentIcon sx={{color:"#2e94fc"}}/>
-                    </div>
-                   
-                  <Typography className='texttp'variant="subtitle2" component="div" sx={{ color: '#989eab' ,}}>
-                   Total Projects  </Typography>
-                  </Stack>
-               
-                  <Typography gutterBottom variant="h5" component="div" sx={{ color: 'black' ,fontWeight:"bold"}}>
-                    <CountUp delay={0.2} end={159} duration={0.3}/>
-                  </Typography>
-             
-              
 
-                 
+                    <div>
+                      <AssignmentIcon sx={{ color: "#2e94fc" }} />
+                    </div>
+
+                    <Typography className='texttp' variant="subtitle2" component="div" sx={{ color: '#989eab', }}>
+                      Total Projects  </Typography>
+                  </Stack>
+
+                  <Typography gutterBottom variant="h5" component="div" sx={{ color: 'black', fontWeight: "bold" }}>
+                    <CountUp delay={0.2} end={159} duration={0.3} />
+                  </Typography>
+
+
+
+
                   <Divider />
-                  <Box height={4 }></Box>
-                 
+                  <Box height={4}></Box>
+
                   <Typography gutterBottom variant="caption" component="div" sx={{ color: '#989eab' }}>
                     Update:March 19,2023
                   </Typography>
@@ -136,32 +142,32 @@ const Overview = () => {
                 </CardContent>
 
               </Card>
-             
-        
-          </Grid><Grid item xs={3}>
-              
-              <Card sx={{ minWidth: 100 + "%", height: 119}}>
+
+
+            </Grid><Grid item xs={3}>
+
+              <Card sx={{ minWidth: 100 + "%", height: 119 }}>
 
                 <CardContent>
                   <Stack spacing={1} direction='row'>
-                    
-                      <div>
-                    <AssignmentIcon sx={{color:"#2e94fc"}}/>
-                    </div>
-                   
-                  <Typography className='texttp'variant="subtitle2" component="div" sx={{ color: '#989eab' ,}}>
-                   Finished Projects   </Typography>
-                  </Stack>
-                 
-                  <Typography gutterBottom variant="h5" component="div" sx={{ color: 'black' ,fontWeight:"bold"}}>
-                    <CountUp delay={0.2} end={112} duration={0.3}/>
-                  </Typography>
-               
 
-                
+                    <div>
+                      <AssignmentIcon sx={{ color: "#2e94fc" }} />
+                    </div>
+
+                    <Typography className='texttp' variant="subtitle2" component="div" sx={{ color: '#989eab', }}>
+                      Finished Projects   </Typography>
+                  </Stack>
+
+                  <Typography gutterBottom variant="h5" component="div" sx={{ color: 'black', fontWeight: "bold" }}>
+                    <CountUp delay={0.2} end={112} duration={0.3} />
+                  </Typography>
+
+
+
                   <Divider />
-                  <Box height={4 }></Box>
-                 
+                  <Box height={4}></Box>
+
                   <Typography gutterBottom variant="caption" component="div" sx={{ color: '#989eab' }}>
                     Update:March 19,2023
                   </Typography>
@@ -170,38 +176,79 @@ const Overview = () => {
                 </CardContent>
 
               </Card>
-             
-        
-          </Grid>
-        
+
+
+            </Grid>
+
           </Grid>
           <Box height={20} />
 
           <Grid container spacing={2}>
             <Grid item xs={6}>
-              <Card sx={{ minWidth: 100 + "%", height: 119}}>
-                <Stack direction='row'> 
-                 
-                <Typography className='texttp'variant="subtitle2" component="div" sx={{ color: 'black' ,fontWeight:"bold"}}>
-                   Enrollment Analytics   </Typography>
-                   <Card sx={{width:30+"%",height:25}}>
-                        <Stack direction='row'>
-                        <Typography gutterBottom variant="caption" component="div" sx={{ color: '#989eab' }}>
+              <Card sx={{ minWidth: 100 + "%", height: 300, padding: "10px" }}>
+                <CardContent>
+                  <Stack direction='row' justifyContent="space-between">
+
+                    <Typography className='texttp' variant="subtitle2" component="div" sx={{ color: 'black', fontWeight: "bold" }}>
+                      Enrollment Analytics   </Typography>
+                    <Card sx={{ width: 40 + "%", height: 25 }}>
+                      <Stack direction='row' justifyContent="space-between">
+                        {/* <Typography gutterBottom variant="caption" component="div" sx={{ color: '#989eab' }}>
                     time period
-                  </Typography> <Typography gutterBottom variant="caption" component="div" sx={{ color: '#989eab' }}>
-                    time period
-                  </Typography>
-                        </Stack>
-                   </Card>
-                </Stack>
+                  </Typography>  */}
+                        <Typography className='calendartext' gutterBottom variant="caption" component="div" sx={{ color: 'black', fontWeight: "bold" }}>
+                          June2023 - Dec2023
+                        </Typography>
+                        <CalendarMonthIcon sx={{ color: "grey" }} />
+                      </Stack>
+                    </Card>
+                  </Stack>
+                  <Box height={3}></Box>
+                  <StkBarChart />
+                </CardContent>
 
               </Card>
-          
-              </Grid>
-        
-              </Grid>
-        
-          
+
+            </Grid>
+            <Grid item xs={6}>
+              <Card sx={{ minWidth: 100 + "%", height: 300, padding: "10px" }}>
+                <CardContent>
+                  <Stack direction='row' justifyContent="space-between">
+
+                    <Typography className='texttp' variant="subtitle2" component="div" sx={{ color: 'black', fontWeight: "bold" }}>
+                      Employee Attendance   </Typography>
+                  
+                      <ButtonGroup variant="outlined" color='inherit' size='small' aria-label="small button group">
+                        <Button >
+                          <Typography variant="body2" style={{ fontSize: '8px',fontWeight:"bold" ,textTransform:"none"}}>
+                            Today
+                          </Typography>
+                        </Button>
+                        <Button>
+                          <Typography variant="body2" style={{ fontSize: '8px', fontWeight:"bold" ,textTransform:"none"}}>
+                            This week
+                          </Typography>
+                        </Button>
+                        <Button >
+                          <Typography variant="body2" style={{ fontSize: '8px', fontWeight:"bold" ,textTransform:"none" }}>
+                            This month
+                          </Typography>
+                        </Button>
+                      </ButtonGroup>
+                  
+                  </Stack>
+                  <Box height={3}></Box>
+                  <LineChart/>
+
+                </CardContent>
+
+              </Card>
+
+            </Grid>
+
+          </Grid>
+
+
 
         </Box>
       </Box>

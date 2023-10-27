@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const MyChart = () => {
+const StkBarChart = () => {
     const chartRef = useRef(null);
     // Add your license key her
 
@@ -118,9 +118,9 @@ const MyChart = () => {
 
     return (
         <div>
-            <div id="Chart" ref={chartRef} style={{ width: '35%', height: '250px' }}></div>
+            <div id="Chart" ref={chartRef} style={{ width: '100%', height: '250px' }}></div>
         </div>
     );
 };
 
-export default MyChart;
+export default StkBarChart;

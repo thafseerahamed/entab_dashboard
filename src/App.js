@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home';
 import Analytics from './pages/Analytics';
 import StBarChart from './Test/StBarChart';
-import SyncStBarchart from './Test/SyncStBarchart';
 import LineChart from './Test/LineChart';
 import Overview from './pages/Overview';
 
@@ -21,7 +20,7 @@ function App() {
           <Route path='/analytics' element={<Analytics />}></Route>
           <Route path='/overview' element={<Overview />}></Route>
           <Route path='/ab' element={<StBarChart />}></Route>
-          <Route path='/sy' element={<SyncStBarchart />}></Route>
+          {/* <Route path='/sy' element={<SyncStBarchart />}></Route> */}
           <Route path='/ln' element={<LineChart />}></Route>
           <Route path='/dt' element={<DtRangePicker />}></Route>
         </Routes>
