@@ -60,7 +60,7 @@ const StkBarChart = ({data}) => {
         return () => {
             chart.destroy(); // Clean up when the component unmounts
         };
-    }, []);
+    }, [data]);
 
     return (
         <div>

@@ -12,6 +12,9 @@
   padding-bottom: 3px;
 
 }
+.pointer-cursor {
+  cursor: pointer;
+}
 
 .datepicker{
   position: absolute;
