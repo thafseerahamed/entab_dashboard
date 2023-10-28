@@ -17,10 +17,10 @@ To facilitate testing, I've generated data with the following date ranges:
 ## You have the flexibility to choose any day for testing, but it's crucial 
 ## to keep the month and year exactly the same as the ranges specified below:
 
-1.Jan,2023 - Jun,2023  
-2.Mar,2023 - Aug,2023
-3.Jun,2023 - Nov,2023
-4.Jul,2023 - Dec,2023
+1.Jan,2023 to Jun,2023  
+2.Mar,2023 to Aug,2023
+3.Jun,2023 to Nov,2023
+4.Jul,2023 to Dec,2023
 
 
 

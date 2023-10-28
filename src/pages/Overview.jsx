@@ -247,7 +247,7 @@ const Overview = () => {
                           {`${format(date.startDate, 'MMM,yyy')} - ${format(date.endDate, 'MMM,yyy')}`}
                         </Typography>
 
-                        {openDate ? <ArrowCircleRightIcon className='pointer-cursor' onClick={handleClick} sx={{ color: "grey" }} /> : <CalendarMonthIcon className='pointer-cursor' onClick={handleClick} sx={{ color: "grey" }} />}
+                        {openDate ? <ArrowCircleRightIcon className='pointer-cursor' onClick={handleClick} sx={{ color: "#989eab" }} /> : <CalendarMonthIcon className='pointer-cursor' onClick={handleClick} sx={{ color: "#989eab" }} />}
 
 
 
