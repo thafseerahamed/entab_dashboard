@@ -1,28 +1,28 @@
-# Deployed Link
+steps for running the project
 
-https://65350fabe7d32463785463c3--subtle-yeot-59f604.netlify.app/
+come to the root folder and
+### `npm install`
 
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
+then 
 ### `npm start`
 
-Runs the app in the development mode.\
+it will Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Within the Barchart section, you'll find a Date Picker where you can choose a date range.
+## Once you've selected both  start and end date, simply click the arrow button located above the barchart, 
+## and your chosen date range will dynamically update the Bar Chart.
 
-### `npm test`
+To facilitate testing, I've generated data with the following date ranges:
+## You have the flexibility to choose any day for testing, but it's crucial 
+## to keep the month and year exactly the same as the ranges specified below:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.Jan,2023 - Jun,2023  
+2.Mar,2023 - Aug,2023
+3.Jun,2023 - Nov,2023
+4.Jul,2023 - Dec,2023
+
+
 
 ### `npm run build`
 
