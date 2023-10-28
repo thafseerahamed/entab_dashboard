@@ -14,8 +14,10 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAppStore } from '../appStore';
+import { Stack } from '@mui/material';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 
 const drawerWidth = 240;
 
@@ -74,7 +76,12 @@ export default function Sidenav() {
   const navigate = useNavigate();
   const open = useAppStore((state) => state.dOpen);
 
-
+const first = [
+  {
+    title: 'Attendance',
+    icon: <AccountBalanceIcon />,
+  }
+]
 
 
   return (
@@ -82,6 +89,41 @@ export default function Sidenav() {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <Box height={30} />
+     <Stack>
+     <ListItem  disablePadding  onClick={() => navigate('/')}>
+            <ListItemButton>
+              <ListItemIcon>
+              <AccountBalanceIcon sx={{color: '#0d54dc'}} /> 
+              </ListItemIcon >
+              <ListItemText primary="Overview" primaryTypographyProps={{ style: { color: '#0d54dc',fontWeight:"bold" } }}/>
+            </ListItemButton>
+          </ListItem>
+      <List>
+        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+              <HomeIcon /> 
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+              <HomeIcon /> 
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      </Stack>
 
       {/* <Drawer variant="permanent" open={open}>
         <DrawerHeader>
@@ -90,7 +132,7 @@ export default function Sidenav() {
           </IconButton>
         </DrawerHeader>
         <Divider /> */}
-        <List>
+        {/* <List>
 
           <ListItem disablePadding sx={{ display: 'block' }} onClick={() => navigate('/')}>
             <ListItemButton
@@ -137,7 +179,7 @@ export default function Sidenav() {
           <div>halopojfhgiudgh
           </div>
 
-        </List>
+        </List> */}
 
       {/* </Drawer> */}
 

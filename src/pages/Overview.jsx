@@ -20,6 +20,7 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import StkBarChart from '../Test/StkBarChart';
 import LineChart from '../Test/LineChart';
+import TableData from '../components/TableData';
 const Overview = () => {
   const buttonStyle = {
     fontSize: '12px', // Adjust the font size as needed
@@ -217,28 +218,28 @@ const Overview = () => {
 
                     <Typography className='texttp' variant="subtitle2" component="div" sx={{ color: 'black', fontWeight: "bold" }}>
                       Employee Attendance   </Typography>
-                  
-                      <ButtonGroup variant="outlined" color='inherit' size='small' aria-label="small button group">
-                        <Button >
-                          <Typography variant="body2" style={{ fontSize: '8px',fontWeight:"bold" ,textTransform:"none"}}>
-                            Today
-                          </Typography>
-                        </Button>
-                        <Button>
-                          <Typography variant="body2" style={{ fontSize: '8px', fontWeight:"bold" ,textTransform:"none"}}>
-                            This week
-                          </Typography>
-                        </Button>
-                        <Button >
-                          <Typography variant="body2" style={{ fontSize: '8px', fontWeight:"bold" ,textTransform:"none" }}>
-                            This month
-                          </Typography>
-                        </Button>
-                      </ButtonGroup>
-                  
+
+                    <ButtonGroup variant="outlined" color='inherit' size='small' aria-label="small button group">
+                      <Button >
+                        <Typography variant="body2" style={{ fontSize: '8px', fontWeight: "bold", textTransform: "none" }}>
+                          Today
+                        </Typography>
+                      </Button>
+                      <Button>
+                        <Typography variant="body2" style={{ fontSize: '8px', fontWeight: "bold", textTransform: "none" }}>
+                          This week
+                        </Typography>
+                      </Button>
+                      <Button >
+                        <Typography variant="body2" style={{ fontSize: '8px', fontWeight: "bold", textTransform: "none" }}>
+                          This month
+                        </Typography>
+                      </Button>
+                    </ButtonGroup>
+
                   </Stack>
                   <Box height={3}></Box>
-                  <LineChart/>
+                  <LineChart />
 
                 </CardContent>
 
@@ -246,6 +247,34 @@ const Overview = () => {
 
             </Grid>
 
+          </Grid>
+          <Box height={20} />
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <Card sx={{ minWidth: 100 + "%", height: 490   }}>
+
+                <CardContent>
+                  <Stack direction='row' justifyContent="space-between">
+
+                    <Typography className='texttp' variant="subtitle2" component="div" sx={{ color: 'black', fontWeight: "bold" }}>
+                     Recruits Rating  </Typography>
+                      <Card sx={{ width: 20 + "%", height: 25 }}>
+                      <Stack direction='row' justifyContent="space-between">
+                        {/* <Typography gutterBottom variant="caption" component="div" sx={{ color: '#989eab' }}>
+                    time period
+                  </Typography>  */}
+                        <Typography className='calendartext' gutterBottom variant="caption" component="div" sx={{ color: 'black', fontWeight: "bold" }}>
+                          June2023 - Dec2023
+                        </Typography>
+                        <CalendarMonthIcon sx={{ color: "grey" }} />
+                      </Stack>
+                    </Card>
+                  </Stack>
+                  <Box height={9}></Box>
+                  <TableData/>
+                </CardContent>
+              </Card>
+            </Grid>
           </Grid>
 
 

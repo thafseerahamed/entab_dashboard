@@ -8,10 +8,27 @@
   padding-top: 2px;
 
 }
-.calendartext{
-  padding-top: 5px;
+.time{
+  padding-bottom: 3px;
 
 }
+.calendartext{
+  padding-top: 5px;
+  padding-left: 2px;
+
+}
+/* In a separate CSS file or your component's style section */
+.custom-data-grid .MuiDataGrid-colCell,
+.custom-data-grid .MuiDataGrid-cell {
+  padding-left: 30px;  
+  padding-right: 25px; 
+}
+/* In a separate CSS file or your component's style section */
+.custom-data-grid .MuiDataGrid-colCell {
+  text-align: center; 
+}
+
+
 .pro{
   padding-top: 4px;
 
@@ -43,3 +60,22 @@
   background: #f4f7fc;
 }
 
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+  .title {
+    font-size: 30px;
+    font-weight: 200;
+    color: greenyellow;
+    text-transform: uppercase;
+  }
+  .listItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;}
