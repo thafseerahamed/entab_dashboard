@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const StkBarChart = () => {
+const StkBarChart = ({data}) => {
     const chartRef = useRef(null);
     // Add your license key her
 
@@ -43,61 +43,7 @@ const StkBarChart = () => {
                 }
             },
             //Initializing Chart Series
-            series: [
-                {
-                    type: 'StackingColumn',
-                    dataSource: [
-                        { x: 'June', y: 111.1 },
-                        { x: 'July', y: 127.3 },
-                        { x: 'August', y: 143.4 },
-                        { x: 'Sep', y: 159.9 },
-                        { x: 'Oct', y: 76.9 },
-                        { x: 'Nov', y: 99.5 },],
-                    xName: 'x', width: 2, fill: '#3490fd',
-                    yName: 'y', name: 'Product',
-
-                },
-                {
-                    type: 'StackingColumn',
-                    dataSource: [
-                        { x: 'June', y: 76.9 },
-                        { x: 'July', y: 99.5 },
-                        { x: 'Aug', y: 76.9 },
-                        { x: 'Sep', y: 99.5 },
-                        { x: 'Oct', y: 121.7 },
-                        { x: 'Nov', y: 142.5 }],
-                    xName: 'x', width: 2,
-                    yName: 'y', name: 'Marketing', fill: '#45bdfa',
-
-                },
-                {
-                    type: 'StackingColumn',
-                    dataSource: [
-                        { x: 'June', y: 66.1 },
-                        { x: 'July', y: 79.3 },
-                        { x: 'Aug', y: 91.3 },
-                        { x: 'Sep', y: 102.4 },
-                        { x: 'Oct', y: 76.9 },
-                        { x: 'Nov', y: 99.5 },],
-                    xName: 'x', width: 2,
-                    yName: 'y', name: 'Sales', fill: '#ff8d4e',
-
-
-                }, {
-                    type: 'StackingColumn',
-                    dataSource: [
-                        { x: 'June', y: 56.1 },
-                        { x: 'July', y: 69.3 },
-                        { x: 'Aug', y: 81.3 },
-                        { x: 'Sep', y: 92.4 },
-                        { x: 'Oct', y: 76.9 },
-                        { x: 'Nov', y: 99.5 },],
-                    xName: 'x', width: 2,
-                    yName: 'y', name: 'Engineering', fill: '#ffb444',
-
-
-                },
-            ],
+            series:data,
             //Initializing User Interaction Tooltip
             tooltip: {
                 enableAnimation: true,

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Sidenav from '../components/Sidenav'
 import { Box, Button, ButtonGroup, Divider, Typography } from '@mui/material'
 import Navbar from '../components/Navbar'
@@ -40,6 +40,15 @@ const Overview = () => {
     setOpenDate((prev) => !prev)
     console.log(date);
   }
+
+  useEffect(() => {
+   
+  
+    return () => {
+      
+    }
+  }, [])
+  
 
   return (
     <div >
@@ -222,7 +231,7 @@ const Overview = () => {
                     </Card>
                   </Stack>
                   <Box height={3}></Box>
-                  <StkBarChart />
+                  <StkBarChart data={data[1]} />
                 </CardContent>
 
               </Card>
@@ -318,3 +327,118 @@ const Overview = () => {
 }
 
 export default Overview
+
+
+
+const data =  [[
+  {
+      type: 'StackingColumn',
+      dataSource: [
+          { x: 'June', y: 111.1 },
+          { x: 'July', y: 127.3 },
+          { x: 'August', y: 143.4 },
+          { x: 'Sep', y: 159.9 },
+          { x: 'Oct', y: 76.9 },
+          { x: 'Nov', y: 99.5 },],
+      xName: 'x', width: 2, fill: '#3490fd',
+      yName: 'y', name: 'Product',
+
+  },
+  {
+      type: 'StackingColumn',
+      dataSource: [
+          { x: 'June', y: 76.9 },
+          { x: 'July', y: 99.5 },
+          { x: 'Aug', y: 76.9 },
+          { x: 'Sep', y: 99.5 },
+          { x: 'Oct', y: 121.7 },
+          { x: 'Nov', y: 142.5 }],
+      xName: 'x', width: 2,
+      yName: 'y', name: 'Marketing', fill: '#45bdfa',
+
+  },
+  {
+      type: 'StackingColumn',
+      dataSource: [
+          { x: 'June', y: 66.1 },
+          { x: 'July', y: 79.3 },
+          { x: 'Aug', y: 91.3 },
+          { x: 'Sep', y: 102.4 },
+          { x: 'Oct', y: 76.9 },
+          { x: 'Nov', y: 99.5 },],
+      xName: 'x', width: 2,
+      yName: 'y', name: 'Sales', fill: '#ff8d4e',
+
+
+  }, {
+      type: 'StackingColumn',
+      dataSource: [
+          { x: 'June', y: 56.1 },
+          { x: 'July', y: 69.3 },
+          { x: 'Aug', y: 81.3 },
+          { x: 'Sep', y: 92.4 },
+          { x: 'Oct', y: 76.9 },
+          { x: 'Nov', y: 99.5 },],
+      xName: 'x', width: 2,
+      yName: 'y', name: 'Engineering', fill: '#ffb444',
+
+
+  },
+],
+
+[
+  {
+      type: 'StackingColumn',
+      dataSource: [
+          { x: 'Jan', y: 125.1 },
+          { x: 'Feb', y: 147.3 },
+          { x: 'Mar', y: 95.4 },
+          { x: 'Apr', y: 149.9 },
+          { x: 'May', y: 123.9 },
+          { x: 'June', y: 150.5 },],
+      xName: 'x', width: 2, fill: '#3490fd',
+      yName: 'y', name: 'Product',
+
+  },
+  {
+      type: 'StackingColumn',
+      dataSource: [
+          { x: 'Jan', y: 176.9 },
+          { x: 'Feb', y: 199.5 },
+          { x: 'Mar', y: 176.9 },
+          { x: 'Apr', y: 199.5 },
+          { x: 'May', y: 71.7 },
+          { x: 'June', y: 82.5 }],
+      xName: 'x', width: 2,
+      yName: 'y', name: 'Marketing', fill: '#45bdfa',
+
+  },
+  {
+      type: 'StackingColumn',
+      dataSource: [
+          { x: 'Jan', y: 166.1 },
+          { x: 'Feb', y: 179.3 },
+          { x: 'Mar', y: 191.3 },
+          { x: 'Apr', y: 64.4 },
+          { x: 'May', y: 86.9 },
+          { x: 'June', y: 119.5 },],
+      xName: 'x', width: 2,
+      yName: 'y', name: 'Sales', fill: '#ff8d4e',
+
+
+  }, {
+      type: 'StackingColumn',
+      dataSource: [
+          { x: 'Jan', y: 156.1 },
+          { x: 'Feb', y: 169.3 },
+          { x: 'Mar', y: 75.3 },
+          { x: 'Apr', y: 42.4 },
+          { x: 'May', y: 96.9 },
+          { x: 'June', y: 75.5 },],
+      xName: 'x', width: 2,
+      yName: 'y', name: 'Engineering', fill: '#ffb444',
+
+
+  },
+],
+]
