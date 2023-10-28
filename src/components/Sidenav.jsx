@@ -5,17 +5,13 @@ import MuiDrawer from '@mui/material/Drawer';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import HomeIcon from '@mui/icons-material/Home';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { Link, useNavigate } from 'react-router-dom';
-import { useAppStore } from '../appStore';
+import { useNavigate } from 'react-router-dom';
+
 import { Stack, Typography } from '@mui/material';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import AdjustIcon from '@mui/icons-material/Adjust';
@@ -83,7 +79,7 @@ export default function Sidenav() {
   const theme = useTheme();
   // const [open, setOpen] = React.useState(true);
   const navigate = useNavigate();
-  const open = useAppStore((state) => state.dOpen);
+
 
   const first = [
     {
@@ -173,7 +169,7 @@ export default function Sidenav() {
               </ListItem>
             ))}
           </List>
-
+              <Box height={10}/>
           <Typography className='sidenavhead' gutterBottom variant="caption" component="div" sx={{ color: '#989eab', fontWeight: "bold" }}>
             Recruitment
           </Typography>
@@ -190,7 +186,7 @@ export default function Sidenav() {
               </ListItem>
             ))}
           </List>
-
+          <Box height={10}/>
           <Typography className='sidenavhead' gutterBottom variant="caption" component="div" sx={{ color: '#989eab', fontWeight: "bold" }}>
             Organization
           </Typography>

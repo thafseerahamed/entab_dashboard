@@ -3,15 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@canvasjs/react-charts": "^1.0.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.14",
-    "@mui/lab": "^5.0.0-alpha.67",
     "@mui/material": "^5.14.14",
     "@mui/x-data-grid": "^6.17.0",
-    "@mui/x-date-pickers": "^6.17.0",
-    "@mui/x-date-pickers-pro": "^6.17.0",
     "@syncfusion/ej2-base": "^23.1.41",
     "@syncfusion/ej2-charts": "^23.1.42",
     "@syncfusion/ej2-react-base": "^23.1.36",
@@ -24,11 +20,9 @@
     "react-countup": "^6.4.2",
     "react-date-range": "^1.4.0",
     "react-dom": "^18.2.0",
-    "react-google-charts": "^4.0.1",
     "react-router-dom": "^6.17.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "zustand": "^4.4.3"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

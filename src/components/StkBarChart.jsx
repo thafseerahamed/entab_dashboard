@@ -34,7 +34,7 @@ const StkBarChart = ({data}) => {
                 majorGridLines: { width: 0 },
                 minorGridLines: { width: 0 },
                 minorTickLines: { width: 0 },
-                labelFormat: '{value}B',
+                labelFormat: '{value}k',
             },
             chartArea: {
 

@@ -2,12 +2,12 @@
  * Sample for Line Series
  */
 import * as React from 'react';
-import { useEffect } from 'react';
+
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, LineSeries, Legend, DateTime, Tooltip, Highlight } from '@syncfusion/ej2-react-charts';
-import { Browser } from '@syncfusion/ej2-base';
-export let data1 = [{ x: new Date(2012, 6, 11), y: 435 }, { x: new Date(2013, 6, 12), y: 824 }, { x: new Date(2014, 6, 11), y: 287 }, { x: new Date(2015, 6, 11), y: 455 }, { x: new Date(2016, 6, 11), y: 456 }, { x: new Date(2017, 6, 11), y: 377 }, { x: new Date(2018, 6, 11), y: 445 }, { x: new Date(2019, 6, 11), y: 589 }, { x: new Date(2020, 6, 11), y: 670 }];
-export let data2 = [{ x: new Date(2012, 6, 11), y: 530 }, { x: new Date(2013, 6, 12), y: 560 }, { x: new Date(2014, 6, 11), y: 590 }, { x: new Date(2015, 6, 11), y: 576 }, { x: new Date(2016, 6, 11), y: 786 }, { x: new Date(2017, 6, 11), y: 903 }, { x: new Date(2018, 6, 11), y: 655 }, { x: new Date(2019, 6, 11), y: 755 }, { x: new Date(2020, 6, 11), y: 765 }];
-export let data3 = [{ x: new Date(2012, 6, 11), y: 566 }, { x: new Date(2013, 6, 12), y: 475 }, { x: new Date(2014, 6, 11), y: 430 }, { x: new Date(2015, 6, 11), y: 388 }, { x: new Date(2016, 6, 11), y: 289 }, { x: new Date(2017, 6, 11), y: 765}, { x: new Date(2018, 6, 11), y: 478 }, { x: new Date(2019, 6, 11), y: 687 }, { x: new Date(2020, 6, 11), y: 710 }];
+
+export let data1 = [{ x: new Date(2012, 6, 11), y: 435 }, { x: new Date(2013, 6, 13), y: 824 }, { x: new Date(2014, 6, 11), y: 287 }, { x: new Date(2015, 6, 11), y: 455 }, { x: new Date(2016, 6, 11), y: 456 }, { x: new Date(2017, 6, 11), y: 377 }, { x: new Date(2018, 6, 11), y: 445 }, { x: new Date(2019, 6, 11), y: 589 }, { x: new Date(2020, 6, 11), y: 670 }];
+export let data2 = [{ x: new Date(2012, 6, 11), y: 530 }, { x: new Date(2013, 6, 13), y: 560 }, { x: new Date(2014, 6, 11), y: 590 }, { x: new Date(2015, 6, 11), y: 576 }, { x: new Date(2016, 6, 11), y: 786 }, { x: new Date(2017, 6, 11), y: 903 }, { x: new Date(2018, 6, 11), y: 655 }, { x: new Date(2019, 6, 11), y: 755 }, { x: new Date(2020, 6, 11), y: 765 }];
+export let data3 = [{ x: new Date(2012, 6, 11), y: 566 }, { x: new Date(2013, 6, 13), y: 475 }, { x: new Date(2014, 6, 11), y: 430 }, { x: new Date(2015, 6, 11), y: 388 }, { x: new Date(2016, 6, 11), y: 289 }, { x: new Date(2017, 6, 11), y: 765}, { x: new Date(2018, 6, 11), y: 478 }, { x: new Date(2019, 6, 11), y: 687 }, { x: new Date(2020, 6, 11), y: 710 }];
 
 const SAMPLE_CSS = `
     .control-fluid {
