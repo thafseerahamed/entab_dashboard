@@ -16,9 +16,18 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAppStore } from '../appStore';
-import { Stack } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-
+import AdjustIcon from '@mui/icons-material/Adjust';
+import InboxIcon from '@mui/icons-material/Inbox';
+import GroupsIcon from '@mui/icons-material/Groups';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import Diversity2Icon from '@mui/icons-material/Diversity2';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import DescriptionIcon from '@mui/icons-material/Description';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
+import SettingsIcon from '@mui/icons-material/Settings';
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -76,56 +85,144 @@ export default function Sidenav() {
   const navigate = useNavigate();
   const open = useAppStore((state) => state.dOpen);
 
-const first = [
-  {
-    title: 'Attendance',
-    icon: <AccountBalanceIcon />,
-  }
-]
+  const first = [
+    {
+      title: 'Attendance',
+      icon: <AdjustIcon />,
+    },
+    {
+      title: 'Inbox',
+      icon: <InboxIcon />,
+    }
+  ]
+
+  const second = [
+    {
+      title: 'Candidates',
+      icon: <GroupsIcon />,
+    },
+    {
+      title: 'Job',
+      icon: <BusinessCenterIcon />,
+    },
+    {
+      title: 'Referral',
+      icon: <Diversity2Icon />,
+    }
+  ]
+
+  const organaisation = [
+    {
+      title: 'Calendar',
+      icon: <CalendarMonthIcon />,
+    },
+    {
+      title: 'Employee',
+      icon: <GroupsIcon />,
+    },
+    {
+      title: 'Projects',
+      icon: <DescriptionIcon />,
+    },
+    {
+      title: 'Analytics',
+      icon: <AnalyticsIcon />,
+    },
+    {
+      title: 'Reports',
+      icon: <LibraryBooksIcon />,
+    }
+  ]
+
+  const footer = [
+    {
+      title: 'Help',
+      icon: <ReportGmailerrorredIcon />,
+    },
+    {
+      title: 'Settings',
+      icon: <SettingsIcon />,
+    }
+  ]
+
 
 
   return (
     <div className='bgcolor'>
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <Box height={30} />
-     <Stack>
-     <ListItem  disablePadding  onClick={() => navigate('/')}>
+      <Box sx={{ display: 'flex' }}>
+        <CssBaseline />
+        <Box height={30} />
+        <Stack>
+          <ListItem disablePadding onClick={() => navigate('/')}>
             <ListItemButton>
               <ListItemIcon>
-              <AccountBalanceIcon sx={{color: '#0d54dc'}} /> 
+                <AccountBalanceIcon sx={{ color: '#0d54dc' }} />
               </ListItemIcon >
-              <ListItemText primary="Overview" primaryTypographyProps={{ style: { color: '#0d54dc',fontWeight:"bold" } }}/>
+              <ListItemText primary="Overview" primaryTypographyProps={{ style: { color: '#0d54dc', fontWeight: "bold" } }} />
             </ListItemButton>
           </ListItem>
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-              <HomeIcon /> 
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-              <HomeIcon /> 
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      </Stack>
+          <List>
+            {first.map((item) => (
+              <ListItem key={item.title} disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    {item.icon}
+                  </ListItemIcon>
+                  <ListItemText primary={item.title} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
 
-      {/* <Drawer variant="permanent" open={open}>
+          <Typography className='sidenavhead' gutterBottom variant="caption" component="div" sx={{ color: '#989eab', fontWeight: "bold" }}>
+            Recruitment
+          </Typography>
+
+          <List>
+            {second.map((item) => (
+              <ListItem key={item.title} disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    {item.icon}
+                  </ListItemIcon>
+                  <ListItemText primary={item.title} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+
+          <Typography className='sidenavhead' gutterBottom variant="caption" component="div" sx={{ color: '#989eab', fontWeight: "bold" }}>
+            Organization
+          </Typography>
+
+          <List>
+            {organaisation.map((item) => (
+              <ListItem key={item.title} disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    {item.icon}
+                  </ListItemIcon>
+                  <ListItemText primary={item.title} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+          <Box height={235} />
+          <List>
+            {footer.map((item) => (
+              <ListItem key={item.title} disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    {item.icon}
+                  </ListItemIcon>
+                  <ListItemText primary={item.title} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Stack>
+
+        {/* <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
@@ -181,9 +278,9 @@ const first = [
 
         </List> */}
 
-      {/* </Drawer> */}
+        {/* </Drawer> */}
 
-    </Box>
+      </Box>
     </div>
   );
 }

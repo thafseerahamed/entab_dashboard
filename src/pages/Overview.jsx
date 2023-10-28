@@ -8,11 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import Stack from '@mui/material/Stack'
 import { Avatar } from '@mui/material';
 import '../Dash.css'
-import StorefrontIcon from '@mui/icons-material/Storefront';
-import CreditCardIcon from '@mui/icons-material/CreditCard';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
-import AccordionDash from '../components/AccordionDash';
-import Barchart from '../charts/Barchart';
+import { useState } from 'react';
 import CountUp from 'react-countup';
 import GroupsIcon from '@mui/icons-material/Groups';
 import AssignmentIcon from '@mui/icons-material/Assignment';
@@ -21,10 +17,30 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import StkBarChart from '../Test/StkBarChart';
 import LineChart from '../Test/LineChart';
 import TableData from '../components/TableData';
+import { DateRangePicker } from 'react-date-range';
+import { format } from 'date-fns';
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
 const Overview = () => {
   const buttonStyle = {
     fontSize: '12px', // Adjust the font size as needed
   };
+  const [openDate, setOpenDate] = useState(false)
+  const [date, setDate] = useState({
+    startDate: new Date(),
+    endDate: new Date(),
+    key: 'selection',
+  })
+  const handleChange = (ranges) => {
+    setDate(ranges.selection)
+
+
+  }
+  const handleClick = () => {
+    setOpenDate((prev) => !prev)
+    console.log(date);
+  }
+
   return (
     <div >
       <Navbar />
@@ -184,8 +200,8 @@ const Overview = () => {
           </Grid>
           <Box height={20} />
 
-          <Grid container spacing={2}>
-            <Grid item xs={6}>
+          <Grid container className="datecard" spacing={2}>
+            <Grid item xs={openDate ? 5 : 6}>
               <Card sx={{ minWidth: 100 + "%", height: 300, padding: "10px" }}>
                 <CardContent>
                   <Stack direction='row' justifyContent="space-between">
@@ -198,9 +214,10 @@ const Overview = () => {
                     time period
                   </Typography>  */}
                         <Typography className='calendartext' gutterBottom variant="caption" component="div" sx={{ color: 'black', fontWeight: "bold" }}>
-                          June2023 - Dec2023
+                          {`${format(date.startDate, 'MMM,yyy')} - ${format(date.endDate, 'MMM,yyy')}`}
                         </Typography>
-                        <CalendarMonthIcon sx={{ color: "grey" }} />
+                        <CalendarMonthIcon onClick={handleClick} sx={{ color: "grey" }} />
+
                       </Stack>
                     </Card>
                   </Stack>
@@ -211,7 +228,21 @@ const Overview = () => {
               </Card>
 
             </Grid>
-            <Grid item xs={6}>
+            {openDate && <Grid item xs={6}>
+              <div className='Datepicker'>
+
+                <DateRangePicker
+                  ranges={[date]}
+                  onChange={handleChange}
+                  fixedHeight="100"
+                  dragSelectionEnabled
+                  showMonthAndYearPickers
+
+                />
+
+              </div>
+            </Grid>}
+            <Grid item xs={openDate ? 12 : 6}>
               <Card sx={{ minWidth: 100 + "%", height: 300, padding: "10px" }}>
                 <CardContent>
                   <Stack direction='row' justifyContent="space-between">
@@ -251,14 +282,14 @@ const Overview = () => {
           <Box height={20} />
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <Card sx={{ minWidth: 100 + "%", height: 490   }}>
+              <Card sx={{ minWidth: 100 + "%", height: 490 }}>
 
                 <CardContent>
                   <Stack direction='row' justifyContent="space-between">
 
                     <Typography className='texttp' variant="subtitle2" component="div" sx={{ color: 'black', fontWeight: "bold" }}>
-                     Recruits Rating  </Typography>
-                      <Card sx={{ width: 20 + "%", height: 25 }}>
+                      Recruits Rating  </Typography>
+                    <Card sx={{ width: 20 + "%", height: 25 }}>
                       <Stack direction='row' justifyContent="space-between">
                         {/* <Typography gutterBottom variant="caption" component="div" sx={{ color: '#989eab' }}>
                     time period
@@ -271,7 +302,7 @@ const Overview = () => {
                     </Card>
                   </Stack>
                   <Box height={9}></Box>
-                  <TableData/>
+                  <TableData />
                 </CardContent>
               </Card>
             </Grid>
